@@ -1,0 +1,183 @@
+@font-face {
+    font-family: "Apfel";
+    src: url(Assets/ApfelGrotezk-Regular.otf);
+}
+
+@font-face {
+    font-family: "Italic";
+    src: url(Assets/GTAlpina-Italic.otf);
+}
+
+body {
+    background-color: black;
+    color: white; 
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: row;
+    margin: 2.5vw;
+}
+
+#controls {
+    margin-bottom: 20px;
+    display: flex;
+    float: left;
+    width: 26%;
+    position: absolute;
+    margin-right: 6vw;
+    margin-left: 9vw;
+    flex-wrap: wrap;
+    display: inline-block;
+    height: 48vw;
+}
+
+#line{
+    border: .75px solid pink;
+    transform: rotate(90deg);
+    width: 48vw;
+    height: 0;
+    margin-top: 23.3vw;
+    position: absolute;
+    left: 15vw;
+}
+
+#audioList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: right;
+    width: 55%;
+    margin-top: -1.5vw;
+    margin-right: 2vw;
+}
+
+#controls button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: .5vw;
+    font-size: 3vw;
+    font-family: "Apfel";
+    color: white;
+    text-align: center;
+    margin-top: 7.5%;
+    margin-left: 3.5vw;
+    transition: transform 0.3s ease;
+    height: 8vw;
+    width: 20vw;
+}
+
+#controls button:hover {
+    color: pink;
+    transform: scale(1.05);
+    border-color: pink;
+}
+
+button.recording {
+    background-color: pink;
+}
+
+.menu {
+    top: .2%;
+    position: fixed;
+    color: #fff;
+    font-family: 'Apfel';
+    font-size: 1.15vw;
+}
+
+#about,
+#tutorial, 
+#slash {
+    position: fixed;
+    transition: transform 0.3s ease;
+    backface-visibility: hidden;
+}
+
+#about {
+    left: 46%;
+}
+
+#slash {
+    left: 50%;
+}
+
+#tutorial {
+    right: 43%;
+}
+
+#about:hover,
+#tutorial:hover {
+    color: pink;
+    transform: scale(1.05);
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
+}
+
+a:hover {
+    transform: scale(1.05);
+    color: pink;
+}
+
+.audio-container {
+    width: 12vw;
+    margin-right: 1vw;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: "Apfel";
+    text-align: center;
+    font-size: 2vw;
+    margin-bottom: 1vw;
+    height: 3.2vw;
+    margin-top: .5vw;
+    display: flex; /* Use flex display to control alignment */
+    align-items: center; /* Align items vertically in the middle */
+}
+
+.audio-container span {
+    flex: 1; /* Allow the label to take up the available space */
+}
+
+.audio-container button {
+    font-size: 24px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 2vw;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: white;
+    width: 3.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5vw;
+}
+
+.audio-container button:hover {
+    color: pink;
+    border-color: pink;
+    transform: scale(1.05);
+}
+
+.play-icon::before {
+    content: '\25B6'; /* Unicode character for play */
+}
+
+.pause-icon::before {
+    content: '\II'; /* Unicode character for pause */
+}
+
